@@ -15,7 +15,7 @@ fun main() {
            val secondCompartment = line.substring(line.length/2)
 
            for (element in firstCompartment) {
-               if (secondCompartment.indexOf(element) != -1) {
+               if (element in secondCompartment) {
                    score += calcPriority(element)
                    break
                }
@@ -34,7 +34,7 @@ fun main() {
             val rucksack2 = input[i * 3 + 2]
 
             for (element in rucksack0) {
-                if (rucksack1.indexOf(element) != -1 && rucksack2.indexOf(element) != - 1) {
+                if (element in rucksack1 && element in rucksack2) {
                     score += calcPriority(element)
                     break
                 }
