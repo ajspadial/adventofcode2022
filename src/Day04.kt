@@ -19,8 +19,7 @@ fun main() {
            val range1 = getRange(pair[0])
            val range2 = getRange(pair[1])
 
-           if (((range2.contains(range1.first) && range2.contains(range1.last))
-                       || (range1.contains(range2.first) && range1.contains((range2.last))))) {
+           if (range1.first in range2 && range1.last in range2 || range2.first in range1 && range2.last in range1) {
                score++
            }
        }
@@ -38,8 +37,7 @@ fun main() {
             val range1 = getRange(pair[0])
             val range2 = getRange(pair[1])
 
-            if (((range2.contains(range1.first) || range2.contains(range1.last))
-                        || (range1.contains(range2.first) || range1.contains((range2.last))))) {
+            if (range1.first in range2 || range1.last in range2 || range2.first in range1 || range2.last in range1) {
                 score++
             }
         }
